@@ -22,9 +22,13 @@ class ProductPage(BasePage):
         basket_book_name_text = basket_book_name.text
         book_name = self.browser.find_element(*ProductPageLocators.BOOK_NAME)
         book_name_text = book_name.text
-        assert book_name_text in basket_book_name_text, "Book's name in basket is not correct"
+        assert book_name_text == basket_book_name_text, "Book's name in basket is not correct"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
 
+    def should_be_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), 'Element is not disappeared, but should be'
 
 
 
