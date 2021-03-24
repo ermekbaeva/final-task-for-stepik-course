@@ -6,7 +6,6 @@ class ProductPage(BasePage):
         basket_link = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
         basket_link.click()
 
-
     def should_be_basket_button(self):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_BUTTON), 'There is no add to basket button'
 
