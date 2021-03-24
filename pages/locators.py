@@ -6,6 +6,10 @@ class MainPageLocators():
 class LoginPageLocators():
     REGISTRATION_FORM = (By.CSS_SELECTOR, '#register_form')
     LOGIN_FORM = (By.CSS_SELECTOR, '#login_form')
+    REGISTRATION_EMAIL = (By.CSS_SELECTOR, "#id_registration-email.form-control")
+    REGISTRATION_PASSWORD = (By.CSS_SELECTOR, "[name='registration-password1']")
+    REGISTRATION_PASSWORD_REPEAT = (By.CSS_SELECTOR, "[name='registration-password2']")
+    REGISTRATION_BUTTON = (By.CSS_SELECTOR, '[name="registration_submit"]')
 
 class ProductPageLocators():
     ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, '#add_to_basket_form')
@@ -21,4 +25,5 @@ class BasePageLocators():
     BASKET_LINK = (By.CSS_SELECTOR, 'span.btn-group')
     BASKET_EMPTY_MESSAGE = (By.CSS_SELECTOR, '#content_inner>p')
     PRODUCTS_IN_BASKET = (By.CSS_SELECTOR, 'div.basket-title.hidden-xs')
+    USER_ICON = (By.CSS_SELECTOR, '.icon-user')
 
